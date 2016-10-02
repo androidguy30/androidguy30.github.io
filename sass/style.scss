@@ -35,13 +35,13 @@ $size-header-pad:		4em;
 
 	a {
 		@include vendor-property('transition', 'color #{$duration-transition} ease-in-out, border-color #{$duration-transition} ease-in-out');
-		border-bottom: dotted 1px;
+		// border-bottom: dotted 1px;
 		color: $color-accent-bg;
 		text-decoration: none;
 		
 		&:hover {
 			border-bottom-color: transparent;
-			color: $color-accent-bg !important;
+			/*color: $color-accent-bg !important;*/
 			text-decoration: none;
 		}
 	}
@@ -767,13 +767,15 @@ $size-header-pad:		4em;
 	.button {
 		@include vendor-property('appearance', 'none');
 		@include vendor-property('transition', 'background-color #{$duration-transition} ease-in-out, color #{$duration-transition} ease-in-out, border-color #{$duration-transition} ease-in-out');
-		background-color: transparent;
+		background-color: #23333F;
 		border-radius: $size-border-radius;
 		border: solid 3px $color-border;
-		color: $color-fg-bold !important;
+		color: white;
 		cursor: pointer;
 		display: inline-block;
-		font-weight: $font-weight-bold;
+		text-transform: uppercase;
+		font-size: 0.95em;
+		font-weight: 600;
 		height: 3.15em;
 		height: calc(2.75em + 6px);
 		line-height: 2.75em;
@@ -783,7 +785,7 @@ $size-header-pad:		4em;
 		text-decoration: none;
 		white-space: nowrap;
 
-		&:hover {
+		/* &:hover {
 			border-color: $color-accent-bg;
 			color: $color-accent-bg !important;
 		}
@@ -792,7 +794,7 @@ $size-header-pad:		4em;
 			background-color: transparentize($color-accent-bg, 0.9);
 			border-color: $color-accent-bg;
 			color: $color-accent-bg !important;
-		}
+		} */
 
 		&.icon {
 			padding-left: 1.35em;
@@ -868,10 +870,10 @@ $size-header-pad:		4em;
 	#header {
 		background-color:		$color-accent2-bg;
 		background-attachment:	scroll,								fixed;
-		background-image:		url('images/overlay.png'),			url('../images/bg.jpg');
-		background-position:	top left,							top left;
+		background-image:		url('images/overlay.png'),			url('../images/bg.png');
+		background-position:	top center;
 		background-repeat:		repeat,								no-repeat;
-		background-size:		auto,								auto 100%;
+		background-size:		cover;
 		color: $color-accent2-fg;
 		height: 100%;
 		left: 0;
